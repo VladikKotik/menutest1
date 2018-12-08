@@ -3,31 +3,54 @@ package things.test.ru.menutest1;
 import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
+import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.AppCompatButton;
 import android.support.v7.widget.GridLayoutManager;
 import android.support.v7.widget.RecyclerView;
+import android.util.AttributeSet;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
+import android.widget.LinearLayout;
 
 import com.bumptech.glide.Glide;
 
-public class SpaceGalleryActivity extends AppCompatActivity {
+public class SpaceGalleryActivity extends LinearLayout {
 
-    public void onCreate(Bundle savedInstanceState){
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.content_gallery);
+    public SpaceGalleryActivity(Context context) {
+        this(context,null);
 
-        RecyclerView.LayoutManager layoutManager = new GridLayoutManager(this, 2);
-        RecyclerView recyclerView = (RecyclerView) findViewById(R.id.rv_images);
+
+    }
+
+    public SpaceGalleryActivity (Context context, @Nullable AttributeSet attrs) {
+        this(context, attrs, 0);
+
+    }
+
+    public SpaceGalleryActivity(Context context, @Nullable AttributeSet attrs, int defStyleAttr) {
+        super(context, attrs, defStyleAttr);
+        RecyclerView.LayoutManager layoutManager = new GridLayoutManager(context, 2);
+        inflate(getContext(), R.layout.content_gallery, this);
+
+
+        RecyclerView recyclerView =  findViewById(R.id.rv_images);
+        //RecyclerView recyclerView=new RecyclerView(context, attrs, defStyleAttr);
         recyclerView.setHasFixedSize(true);
         recyclerView.setLayoutManager(layoutManager);
 
-        ImageGalleryAdapter adapter = new ImageGalleryAdapter(this, SpacePhoto.getSpacePhotos());
+        ImageGalleryAdapter adapter = new ImageGalleryAdapter(getContext(), SpacePhoto.getSpacePhotos());
         recyclerView.setAdapter(adapter);
     }
+
+
+//    public void onCreate(Bundle savedInstanceState){
+//        super.onCreate(savedInstanceState);
+//        setContentView(R.layout.content_gallery);
+//
+//    }
 
 
     private class ImageGalleryAdapter extends RecyclerView.Adapter<ImageGalleryAdapter.MyViewHolder> {//закинуть св активити спейс галереи
@@ -80,7 +103,7 @@ public class SpaceGalleryActivity extends AppCompatActivity {
                     SpacePhoto spacePhoto = mSpacePhotos[position];
                     Intent intent = new Intent(mContext, SpacePhotoActivity.class);
                     intent.putExtra(SpacePhotoActivity.EXTRA_SPACE_PHOTO, spacePhoto);
-                    startActivity(intent);//все активити над прописывать в манифесте!!
+                  //  startActivity(intent);//все активити над прописывать в манифесте!!
                 }
             }
         }
