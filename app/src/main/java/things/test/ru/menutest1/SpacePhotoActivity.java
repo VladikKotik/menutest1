@@ -3,6 +3,7 @@ package things.test.ru.menutest1;
 import android.graphics.Bitmap;
 import android.graphics.Color;
 import android.os.Bundle;
+import android.support.design.widget.NavigationView;
 import android.support.v7.app.AppCompatActivity;
 //import android.support.v7.graphics.Palette;
 import android.support.v7.graphics.Palette;
@@ -15,7 +16,7 @@ import com.bumptech.glide.load.engine.DiskCacheStrategy;
 import com.bumptech.glide.request.RequestListener;
 import com.bumptech.glide.request.target.Target;
 
-public class SpacePhotoActivity extends AppCompatActivity {
+public class SpacePhotoActivity extends BaseActivity {
 
     public static final String EXTRA_SPACE_PHOTO = "SpacePhotoActivity.SPACE_PHOTO";
     private ImageView mImageView;
@@ -25,7 +26,8 @@ public class SpacePhotoActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_photo);
-
+        NavigationView navigationView = (NavigationView) findViewById(R.id.photo_nav_view);//навигейшн вю у каждой активити свой
+        navigationView.setNavigationItemSelectedListener(this);////шоб менюха была живая и чета делала
         mImageView = (ImageView) findViewById(R.id.image);
         mTextView=(TextView) findViewById(R.id.description);
         SpacePhoto spacePhoto = getIntent().getParcelableExtra(EXTRA_SPACE_PHOTO);
