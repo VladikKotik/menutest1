@@ -74,6 +74,9 @@ public class BaseActivity extends AppCompatActivity
 
         if (id == R.id.nav_camera) {
             // Handle the camera action
+            Intent intent = new Intent(this, MapsActivity.class);
+            startActivity(intent);//все активити над прописывать в манифесте!!
+
         } else if (id == R.id.nav_gallery) {
             Intent intent = new Intent(this, GalleryActivity.class);
             //intent.putExtra(SpacePhotoActivity.EXTRA_SPACE_PHOTO, spacePhoto);

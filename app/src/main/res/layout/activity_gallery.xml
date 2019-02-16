@@ -9,13 +9,6 @@
     tools:openDrawer="start"
     >
 
-<!--tools:context=".GalleryActivity"-->
-
-
-
-    <!--include layout="@layout/content_gallery"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"/-->
     <things.test.ru.menutest1.SpaceGalleryActivity
         android:id="@+id/sga"
         android:layout_width="match_parent"
