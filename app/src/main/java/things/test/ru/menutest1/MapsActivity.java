@@ -42,7 +42,9 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
 //        LatLng sydney = new LatLng(-34, 151);
 //        mMap.addMarker(new MarkerOptions().position(sydney).title("Marker in Sydney"));
         LatLng sydney = new LatLng(55.356348, 86.083207);
-        mMap.addMarker(new MarkerOptions().position(sydney).title("Мюзэй!!"));
+        mMap.addMarker(new MarkerOptions().position(sydney).title("Кузбасский музей изобразительных искусств"));
         mMap.moveCamera(CameraUpdateFactory.newLatLng(sydney));
+        mMap.moveCamera(CameraUpdateFactory.zoomTo(15));
+
     }
 }
