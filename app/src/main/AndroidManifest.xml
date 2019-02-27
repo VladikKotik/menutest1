@@ -30,6 +30,8 @@
         </activity>
         <activity android:name=".GalleryActivity" />
         <activity android:name=".SpacePhotoActivity" />
+        <activity android:name=".GoodsActivity"/>
+        <activity android:name=".ContactActivity"/>
        <!--
              The API key for Google Maps-based APIs is defined as a string resource.
              (See the file "res/values/google_maps_api.xml").

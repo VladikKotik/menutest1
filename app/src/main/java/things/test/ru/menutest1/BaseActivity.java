@@ -90,7 +90,16 @@ public class BaseActivity extends AppCompatActivity
 
         } else if (id == R.id.nav_manage) {
 
-        } else if (id == R.id.nav_share) {
+        }else if(id==R.id.nav_goods){
+            Intent intent = new Intent(this, GoodsActivity.class);
+            startActivity(intent);//все активити над прописывать в манифесте!!
+        }
+        else if(id==R.id.nav_contact){
+            Intent intent = new Intent(this, ContactActivity.class);
+            startActivity(intent);//все активити над прописывать в манифесте!!
+        }
+
+        else if (id == R.id.nav_share) {
 
         } else if (id == R.id.nav_send) {
 

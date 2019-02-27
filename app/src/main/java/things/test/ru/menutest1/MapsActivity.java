@@ -37,10 +37,13 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
     @Override
     public void onMapReady(GoogleMap googleMap) {
         mMap = googleMap;
-
+        mMap.getUiSettings().setCompassEnabled(true);
+        mMap.getUiSettings().setIndoorLevelPickerEnabled(true);
+        mMap.getUiSettings().setZoomControlsEnabled(true);
         // Add a marker in Sydney and move the camera
 //        LatLng sydney = new LatLng(-34, 151);
 //        mMap.addMarker(new MarkerOptions().position(sydney).title("Marker in Sydney"));
+        //  КНОПАК ДОБАВИТЬ всех этих гуглокартовских
         LatLng sydney = new LatLng(55.356348, 86.083207);
         mMap.addMarker(new MarkerOptions().position(sydney).title("Кузбасский музей изобразительных искусств"));
         mMap.moveCamera(CameraUpdateFactory.newLatLng(sydney));
