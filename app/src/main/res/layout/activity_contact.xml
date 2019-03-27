@@ -13,12 +13,20 @@
         android:layout_width="match_parent">
 
         <TextView
-        android:id="@+id/TextView00"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:autoLink="web"
-        android:linksClickable="true"
-        android:text="Сайт музея: kuzbassizo.ru" />
+            android:id="@+id/TextView_000"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/contact_zagolovok"/>
+
+
+        <TextView
+            android:id="@+id/TextView00"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/TextView_000"
+            android:autoLink="web"
+            android:linksClickable="true"
+            android:text="Сайт музея: kuzbassizo.ru" />
 
         <TextView
             android:id="@+id/TextView01"

@@ -5,12 +5,12 @@
 
     <group android:checkableBehavior="single">
         <item
-            android:id="@+id/nav_slideshow"
+            android:id="@+id/nav_main"
             android:icon="@drawable/ic_menu_slideshow"
             android:title="Стартовая страница" />
         <item
-            android:id="@+id/nav_camera"
-            android:icon="@drawable/ic_menu_camera"
+            android:id="@+id/nav_maps"
+            android:icon="@android:drawable/ic_menu_mapmode"
             android:title="Музей на карте" />
         <item
             android:id="@+id/nav_gallery"
@@ -18,9 +18,14 @@
             android:title="Галерея" />
 
         <item
+            android:id="@+id/nav_xzibits"
+            android:icon="@android:drawable/ic_menu_day"
+            android:title="Выставки" />
+
+        <!--item
             android:id="@+id/nav_manage"
             android:icon="@drawable/ic_menu_manage"
-            android:title="Настройки" />
+            android:title="Настройки" /-->
         <item
             android:id="@+id/nav_goods"
             android:icon="@android:drawable/star_on"
@@ -29,9 +34,13 @@
             android:id="@+id/nav_contact"
             android:icon="@android:drawable/ic_menu_call"
             android:title="Контактная информация" />
+        <item
+            android:id="@+id/nav_inclusive"
+            android:icon="@android:drawable/ic_menu_add"
+            android:title="Инклюзия" />
     </group>
 
-    <item android:title="Communicate">
+    <!--item android:title="Communicate">
         <menu>
             <item
                 android:id="@+id/nav_share"
@@ -42,6 +51,6 @@
                 android:icon="@drawable/ic_menu_send"
                 android:title="Send" />
         </menu>
-    </item>
+    </item-->
 
 </menu>

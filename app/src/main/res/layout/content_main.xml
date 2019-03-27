@@ -22,22 +22,26 @@
         android:layout_height="wrap_content">
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
+            android:layout_height="wrap_content"
             android:orientation="vertical">
 
-        <ImageView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:adjustViewBounds="false"
-            android:contentDescription="mainpicture"
-            android:src="@drawable/museum" />
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="263dp"
+                android:adjustViewBounds="false"
+                android:contentDescription="mainpicture"
+                android:src="@drawable/museum" />
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/main_about"
         tools:layout_editor_absoluteX="0dp"
-        tools:layout_editor_absoluteY="188dp" />
+        tools:layout_editor_absoluteY="188dp"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp"
+        tools:textColor="#00000000"/>
+
         </LinearLayout>
     </ScrollView>
 

@@ -59,9 +59,10 @@ public class BaseActivity extends AppCompatActivity
         int id = item.getItemId();
 
         //noinspection SimplifiableIfStatement
-        if (id == R.id.action_settings) {
-            return true;
-        }
+
+//        if (id == R.id.action_settings) {
+//            return true;
+//        }
 
         return super.onOptionsItemSelected(item);
     }
@@ -72,38 +73,50 @@ public class BaseActivity extends AppCompatActivity
         // Handle navigation view item clicks here.
         int id = item.getItemId();
 
-        if (id == R.id.nav_camera) {
-            // Handle the camera action
+        if (id == R.id.nav_maps) {
+
             Intent intent = new Intent(this, MapsActivity.class);
             startActivity(intent);//все активити над прописывать в манифесте!!
 
         } else if (id == R.id.nav_gallery) {
-            Intent intent = new Intent(this, GalleryActivity.class);
-            //intent.putExtra(SpacePhotoActivity.EXTRA_SPACE_PHOTO, spacePhoto);
-            startActivity(intent);//все активити над прописывать в манифесте!!
+            if(!(this instanceof GalleryActivity)) {
+                Intent intent = new Intent(this, GalleryActivity.class);
+                startActivity(intent);//все активити над прописывать в манифесте!!
+            }
 
 
-        } else if (id == R.id.nav_slideshow) {
+        } else if (id == R.id.nav_main) {
+            if(!(this instanceof MainActivity)){
             Intent intent = new Intent(this, MainActivity.class);
-            //intent.putExtra(SpacePhotoActivity.EXTRA_SPACE_PHOTO, spacePhoto);
             startActivity(intent);//все активити над прописывать в манифесте!!
+            }
 
-        } else if (id == R.id.nav_manage) {
+        } //else if (id == R.id.nav_manage) {}
 
-        }else if(id==R.id.nav_goods){
-            Intent intent = new Intent(this, GoodsActivity.class);
-            startActivity(intent);//все активити над прописывать в манифесте!!
+        else if(id==R.id.nav_goods){
+            if(!(this instanceof GoodsActivity)) {
+                Intent intent = new Intent(this, GoodsActivity.class);
+                startActivity(intent);//все активити над прописывать в манифесте!!
+            }
         }
         else if(id==R.id.nav_contact){
+            if(!(this instanceof ContactActivity)){
             Intent intent = new Intent(this, ContactActivity.class);
             startActivity(intent);//все активити над прописывать в манифесте!!
+            }
+        }
+        else if(id==R.id.nav_inclusive){
+            if(!(this instanceof InclusiveActivity)){
+                Intent intent = new Intent(this, InclusiveActivity.class);
+                startActivity(intent);//все активити над прописывать в манифесте!!
+            }
         }
 
-        else if (id == R.id.nav_share) {
-
-        } else if (id == R.id.nav_send) {
-
-        }
+//        else if (id == R.id.nav_share) {
+//
+//        } else if (id == R.id.nav_send) {
+//
+//        }
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         drawer.closeDrawer(GravityCompat.START);
