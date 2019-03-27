@@ -111,6 +111,12 @@ public class BaseActivity extends AppCompatActivity
                 startActivity(intent);//все активити над прописывать в манифесте!!
             }
         }
+        else if(id==R.id.nav_xzibits){
+            if(!(this instanceof XzibitActivity) && !(this instanceof PostActivity)){
+                Intent intent = new Intent(this, XzibitActivity.class);
+                startActivity(intent);//все активити над прописывать в манифесте!!
+            }
+        }
 
 //        else if (id == R.id.nav_share) {
 //
