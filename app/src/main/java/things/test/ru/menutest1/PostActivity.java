@@ -8,6 +8,9 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.bumptech.glide.Glide;
+import com.bumptech.glide.load.model.GlideUrl;
+import com.bumptech.glide.load.model.LazyHeaderFactory;
+import com.bumptech.glide.load.model.LazyHeaders;
 
 import retrofit2.Call;
 import retrofit2.Callback;
@@ -56,7 +59,13 @@ public class PostActivity extends BaseActivity {
                 post_content.setText(result_post_content);
 
                 if (post != null) {
-                    Glide.with(PostActivity.this).load(post.getGuid())
+
+
+                    GlideUrl url = new GlideUrl(post.getGuid(), new LazyHeaders.Builder()
+                            .addHeader("User-Agent", "Mozilla/5.0 (Windows NT 6.1; WOW64; rv:25.0) Gecko/20100101 Firefox/25.0")
+                            .build());
+
+                    Glide.with(PostActivity.this).load(url)
                             .placeholder(R.drawable.ic_cloud_off_red)
                             .into(post_image);
                 }

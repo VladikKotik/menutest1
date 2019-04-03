@@ -8,13 +8,35 @@
     android:fitsSystemWindows="true"
     tools:openDrawer="start">
 
-    <TextView
+    <RelativeLayout
+        android:layout_height="match_parent"
+        android:layout_width="match_parent">
+    <!--TextView
         android:id="@+id/good_text"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         tools:layout_editor_absoluteX="0dp"
-        tools:layout_editor_absoluteY="188dp"/>
+        tools:layout_editor_absoluteY="188dp"
+        android:textSize="18sp"/-->
 
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/toolbar_good"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+
+            android:background="?attr/colorPrimary" />
+
+        <WebView
+            android:id="@+id/textContent"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_below="@id/toolbar_good"
+        />
+    </RelativeLayout>
 
 
 

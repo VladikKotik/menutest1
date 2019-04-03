@@ -11,6 +11,8 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.bumptech.glide.Glide;
+import com.bumptech.glide.load.model.GlideUrl;
+import com.bumptech.glide.load.model.LazyHeaders;
 
 import java.util.List;
 
@@ -35,8 +37,11 @@ public class PostsAdapter extends RecyclerView.Adapter<PostsAdapter.ViewHolder> 
         PostPreviewModel post = posts.get(position);
 
         ImageView imageView = holder.image;
+        GlideUrl url = new GlideUrl(post.getGuid(), new LazyHeaders.Builder()
+                .addHeader("User-Agent", "Mozilla/5.0 (Windows NT 6.1; WOW64; rv:25.0) Gecko/20100101 Firefox/25.0")
+                .build());
         Glide.with(mContext)
-                .load(post.getGuid())
+                .load(url)
                 .placeholder(R.drawable.ic_cloud_off_red)
                 .into(imageView);
 
