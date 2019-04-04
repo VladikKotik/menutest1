@@ -15,8 +15,12 @@ public class GoodsActivity extends BaseActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_goods);
+
         NavigationView navigationView = (NavigationView) findViewById(R.id.good_nav_view);
         navigationView.setNavigationItemSelectedListener(this);
+
+        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar_new);
+        setSupportActionBar(toolbar);
 
         Resources res = getResources();
 
