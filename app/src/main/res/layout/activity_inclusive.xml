@@ -8,13 +8,27 @@
     android:fitsSystemWindows="true"
     tools:openDrawer="start">
 
-    <TextView
-        android:id="@+id/inclusive_text"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        tools:layout_editor_absoluteX="0dp"
-        tools:layout_editor_absoluteY="188dp"/>
 
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:background="#FFFFFFFF"
+        >
+    <include android:id="@+id/toolbar_new"
+        layout="@layout/toolbar_new"
+        />
+        <WebView
+            android:id="@+id/textInclusive"
+            android:layout_width="match_parent"
+            android:layout_height="fill_parent"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+
+            />
+    </LinearLayout>
 
 
 

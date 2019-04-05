@@ -6,20 +6,20 @@
     <group android:checkableBehavior="single">
         <item
             android:id="@+id/nav_main"
-            android:icon="@drawable/ic_menu_slideshow"
+            android:icon="@drawable/house_logo"
             android:title="Стартовая страница" />
         <item
             android:id="@+id/nav_maps"
             android:icon="@android:drawable/ic_menu_mapmode"
             android:title="Музей на карте" />
-        <item
+        <!--item
             android:id="@+id/nav_gallery"
             android:icon="@drawable/ic_menu_gallery"
-            android:title="Галерея" />
+            android:title="Галерея" /-->
 
         <item
             android:id="@+id/nav_xzibits"
-            android:icon="@android:drawable/ic_menu_day"
+            android:icon="@drawable/img_67898"
             android:title="Выставки" />
 
         <!--item
@@ -28,7 +28,7 @@
             android:title="Настройки" /-->
         <item
             android:id="@+id/nav_goods"
-            android:icon="@android:drawable/star_on"
+            android:icon="@drawable/ruble"
             android:title="Услуги и цены" />
         <item
             android:id="@+id/nav_contact"

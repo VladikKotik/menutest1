@@ -77,19 +77,22 @@ public class BaseActivity extends AppCompatActivity
         if (id == R.id.nav_maps) {
 
             Intent intent = new Intent(this, MapsActivity.class);
+            intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
             startActivity(intent);//все активити над прописывать в манифесте!!
 
-        } else if (id == R.id.nav_gallery) {
-            if(!(this instanceof GalleryActivity)) {
-                Intent intent = new Intent(this, GalleryActivity.class);
-                startActivity(intent);//все активити над прописывать в манифесте!!
-            }
+//         }else if (id == R.id.nav_gallery) {
+//            if(!(this instanceof GalleryActivity)) {
+//                Intent intent = new Intent(this, GalleryActivity.class);
+//                intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+//                startActivity(intent);//все активити над прописывать в манифесте!!
+//            }
 
 
         } else if (id == R.id.nav_main) {
             if(!(this instanceof MainActivity)){
             Intent intent = new Intent(this, MainActivity.class);
-            startActivity(intent);//все активити над прописывать в манифесте!!
+                intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+                startActivity(intent);//все активити над прописывать в манифесте!!
             }
 
         } //else if (id == R.id.nav_manage) {}
@@ -97,24 +100,28 @@ public class BaseActivity extends AppCompatActivity
         else if(id==R.id.nav_goods){
             if(!(this instanceof GoodsActivity)) {
                 Intent intent = new Intent(this, GoodsActivity.class);
+                intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
                 startActivity(intent);//все активити над прописывать в манифесте!!
             }
         }
         else if(id==R.id.nav_contact){
             if(!(this instanceof ContactActivity)){
             Intent intent = new Intent(this, ContactActivity.class);
+            intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
             startActivity(intent);//все активити над прописывать в манифесте!!
             }
         }
         else if(id==R.id.nav_inclusive){
             if(!(this instanceof InclusiveActivity)){
                 Intent intent = new Intent(this, InclusiveActivity.class);
+                intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
                 startActivity(intent);//все активити над прописывать в манифесте!!
             }
         }
         else if(id==R.id.nav_xzibits){
             if(!(this instanceof XzibitActivity) && !(this instanceof PostActivity)){
                 Intent intent = new Intent(this, XzibitActivity.class);
+                intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
                 startActivity(intent);//все активити над прописывать в манифесте!!
             }
         }

@@ -82,6 +82,7 @@ public class PostsAdapter extends RecyclerView.Adapter<PostsAdapter.ViewHolder> 
                 PostPreviewModel onePost = posts.get(position);
                 Intent intent = new Intent(mContext, PostActivity.class);
                 intent.putExtra("post_ID", Integer.parseInt(onePost.getID()));
+                intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
                 mContext.startActivity(intent);//все активити над прописывать в манифесте!!
             }
         }

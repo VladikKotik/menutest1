@@ -2,9 +2,15 @@ package things.test.ru.menutest1;
 
 import android.os.Bundle;
 import android.support.design.widget.NavigationView;
+import android.support.v4.view.GravityCompat;
+import android.support.v4.widget.DrawerLayout;
+import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
+import android.support.v7.widget.Toolbar;
+import android.view.Gravity;
+import android.view.View;
 import android.widget.Toast;
 
 import java.util.ArrayList;
@@ -26,6 +32,27 @@ public class XzibitActivity extends BaseActivity {
         NavigationView navigationView = (NavigationView) findViewById(R.id.xzibit_nav_view);
         navigationView.setNavigationItemSelectedListener(this);
 
+        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar_new);
+        setSupportActionBar(toolbar);
+
+
+        final DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
+        ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(this, drawer, toolbar, R.string.navigation_drawer_open, R.string.navigation_drawer_close);
+        drawer.addDrawerListener(toggle);
+        toggle.syncState();
+
+        toolbar.setNavigationOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                // You have to manually toggle drawer and set icon here
+                if (drawer.isDrawerOpen(GravityCompat.START))
+                    drawer.closeDrawer(GravityCompat.START);
+                else
+                    drawer.openDrawer((int) Gravity.START);
+            }
+        });
+
         posts = new ArrayList<>();
 
         recyclerView = (RecyclerView) findViewById(R.id.posts_recycle_view);
@@ -34,6 +61,7 @@ public class XzibitActivity extends BaseActivity {
 
         PostsAdapter adapter = new PostsAdapter(this,posts);
         recyclerView.setAdapter(adapter);
+
 
         //App.getApi().getData("bash", 50).enqueue(new Callback<List<PostPreviewModel>>() {
         //App.getUmoriliApiRandom().getRandomData( 10).enqueue(new Callback<List<PostPreviewModel>>() {

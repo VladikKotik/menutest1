@@ -13,7 +13,7 @@
 
     <application
         android:allowBackup="true"
-        android:icon="@mipmap/ic_launcher"
+        android:icon="@drawable/minimuseum"
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
@@ -22,7 +22,6 @@
         android:theme="@style/AppTheme.NoActionBar">
         <activity
             android:name=".MainActivity"
-            android:label="@string/app_name"
             android:theme="@style/AppTheme.NoActionBar">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -33,11 +32,17 @@
         <activity android:name=".GalleryActivity" />
         <activity android:name=".SpacePhotoActivity" />
         <activity android:name=".GoodsActivity"
+            android:theme="@style/AppTheme.NoActionBar"
             android:label="Услуги и цены"/>
-        <activity android:name=".ContactActivity"/>
-        <activity android:name=".InclusiveActivity"/>
-        <activity android:name=".PostActivity"/>
-        <activity android:name=".XzibitActivity"/>
+        <activity android:name=".ContactActivity"
+            android:label="Контактная информация"/>
+        <activity android:name=".InclusiveActivity"
+            android:label="Инклюзия"/>
+        <activity android:name=".PostActivity"
+            android:label="Выставки"/>
+        <activity android:name=".XzibitActivity"
+            android:label="Выставки"/>
+
 
         <!--
               The API key for Google Maps-based APIs is defined as a string resource.

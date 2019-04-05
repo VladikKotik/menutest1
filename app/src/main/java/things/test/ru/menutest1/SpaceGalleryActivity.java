@@ -103,6 +103,7 @@ public class SpaceGalleryActivity extends LinearLayout {
                     SpacePhoto spacePhoto = mSpacePhotos[position];
                     Intent intent = new Intent(mContext, SpacePhotoActivity.class);
                     intent.putExtra(SpacePhotoActivity.EXTRA_SPACE_PHOTO, spacePhoto);
+                    intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
                     getContext().startActivity(intent);//все активити над прописывать в манифесте!!
 
                 }
