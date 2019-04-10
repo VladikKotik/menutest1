@@ -49,8 +49,8 @@ public class InclusiveActivity extends BaseActivity {
 //        Resources res = getResources();
 //
 //
-//        TextView textView=(TextView) findViewById(R.id.inclusive_text);
-//        String content= res.getString(R.string.inclusive_about);
+//        TextView textView=(TextView) findViewById(R.id.textInclusive1);
+//        String content= res.getString(R.string.inclusive_part1);
 //        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.N) {
 //            textView.setText(Html.fromHtml(content, Html.FROM_HTML_MODE_COMPACT));
 //        } else {
@@ -58,18 +58,33 @@ public class InclusiveActivity extends BaseActivity {
 //        }
 
 
-        WebView view = (WebView) findViewById(R.id.textInclusive);
+        WebView view = (WebView) findViewById(R.id.textInclusive1);
         String text;
-        text = "<html><body><p align=\"justify\">";
-        text+= "Посетить  экскурсии и мастер-классы  в музее могут вместе с родителями: </p> ";
-        text+= "<ul>\n" +
-                " <li>дети с врожденной инвалидностью;</li>\n" +
-                " <li>дети, у которых ограниченные возможности в здоровой жизни</li>\n" +
-                " <li>дети с отклонениями в развитии. </li></ul>\n" +
-                "<p align=\"justify\">Инклюзия в культурно-образовательной сфере важна не только сама по себе," +
-                " она является первым шагом на пути к открытому обществу.  </p>"+
-                " </body></html>";
+        text = "<html><body bgcolor=\"#EEEEEE\">";
+        text+= getResources().getString(R.string.inclusive_part1);
+        text+=  " </body></html>";
         view.loadDataWithBaseURL(null, text,"text/html", "UTF-8", null);
+
+        view = (WebView) findViewById(R.id.textInclusive2);
+        text = "<html><body bgcolor=\"#EEEEEE\">";
+        text+= getResources().getString(R.string.inclusive_part2);
+        text+=  " </body></html>";
+        view.loadDataWithBaseURL(null, text,"text/html", "UTF-8", null);
+
+        view = (WebView) findViewById(R.id.textInclusive3);
+        text = "<html><body bgcolor=\"#EEEEEE\">";
+        text+= getResources().getString(R.string.inclusive_part3);
+        text+=  " </body></html>";
+        view.loadDataWithBaseURL(null, text,"text/html", "UTF-8", null);
+
+        view = (WebView) findViewById(R.id.textInclusive4);
+        text = "<html><body bgcolor=\"#EEEEEE\">";
+        text+= getResources().getString(R.string.inclusive_part4);
+        text+=  " </body></html>";
+        view.loadDataWithBaseURL(null, text,"text/html", "UTF-8", null);
+
+
 
     }
 }
+

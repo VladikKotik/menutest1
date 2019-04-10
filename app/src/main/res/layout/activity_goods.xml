@@ -14,19 +14,30 @@ tools:openDrawer="start">
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical"
-        android:background="#FFFFFFFF">
+        android:background="#EEEEEE">
         <include android:id="@+id/toolbar_new"
             layout="@layout/toolbar_new"
             />
         <WebView
         android:id="@+id/textGoods"
         android:layout_width="match_parent"
-        android:layout_height="fill_parent"
+        android:layout_height="wrap_content"
         android:layout_alignParentStart="true"
         android:layout_alignParentTop="true"
+            android:layout_marginRight="10dp"
+            android:layout_marginLeft="-10dp"
+        />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
             android:layout_marginLeft="10dp"
             android:layout_marginRight="10dp"
-        />
+            android:autoLink="phone"
+            android:linksClickable="true"
+            android:text="Телефон кассы: +7 (3842) 36 64 78"
+            android:textColor="#000000"
+            android:textSize="16sp" />
+
 
 
 

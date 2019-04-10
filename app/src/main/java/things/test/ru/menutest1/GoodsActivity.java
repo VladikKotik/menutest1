@@ -59,13 +59,14 @@ public class GoodsActivity extends BaseActivity {
 
         WebView view = (WebView) findViewById(R.id.textGoods);
         String text;
-        text = "<html><body>";
+        text = "<html><body bgcolor=\"#EEEEEE\">";
         text+= "<ul>\n" +
                 " <li>Выездная выставка - от 10 000 рублей</li>\n" +
                 " <li>Онлайн-трансляция экскурсии с выставки - по договоренности</li>\n" +
                 " <li>Мастер-классы по тематике 150-250 рублей </li>\n" +
                 " <li>Квест по выставке - по договоренности </li>\n" +
-                "</ul> </body></html>";
+                " <li>Посещение выставки от 100 до 250 рублей. Цены уточняйте в кассе </li>\n" +
+                "</ul>  </body></html>";
         view.loadDataWithBaseURL(null, text,"text/html", "UTF-8", null);
     }
 }

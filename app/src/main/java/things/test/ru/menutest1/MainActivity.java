@@ -59,7 +59,7 @@ public class MainActivity extends BaseActivity {
 
         WebView view = (WebView) findViewById(R.id.textMain);
         String text;
-        text = "<html><body>";
+        text = "<html><body bgcolor=\"#EEEEEE\">";
 
         text+= getResources().getString(R.string.main_about) +"  </body></html>";
         view.loadDataWithBaseURL(null, text,"text/html", "UTF-8", null);

@@ -68,10 +68,10 @@ public class XzibitActivity extends BaseActivity {
         App.getMuzeyApiPosts().getData().enqueue(new Callback<List<PostPreviewModel>>() {
             @Override
             public void onResponse(Call<List<PostPreviewModel>> call, Response<List<PostPreviewModel>> response) {
-                System.out.println("=========responded");
-                System.out.println(response);
+                //System.out.println("=========responded");
+                //System.out.println(response);
                 posts.addAll(response.body());
-                System.out.println("======got some to add");
+                //System.out.println("======got some to add");
                 recyclerView.getAdapter().notifyDataSetChanged();
             }
 

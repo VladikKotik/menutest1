@@ -83,7 +83,9 @@ public class PostActivity extends BaseActivity {
 
 
                 //System.out.println(post.getPostContent());
-                String result_post_content = post.getPostContent().replaceFirst("[<].*?[>]", "");
+                String result_post_content = post.getPostContent().replaceAll("[<].*?[>]", "");
+                //String result_post_content2 = result_post_content.replaceFirst("\r\n\r", "\n\t\t");
+
                 post_content.setText(result_post_content);
 
                 if (post != null) {

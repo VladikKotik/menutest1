@@ -11,67 +11,69 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:orientation="vertical"
-        android:background="#FFFFFFFF">
-        <include android:id="@+id/toolbar_new"
-            layout="@layout/toolbar_new"
-            />
-    <RelativeLayout
-    android:layout_height="match_parent"
-    android:layout_width="match_parent"
-        android:background="#FFFFFFFF">
+        android:background="#EEEEEE"
+        android:orientation="vertical">
 
-        <TextView
-            android:id="@+id/TextView00"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:autoLink="web"
-            android:linksClickable="true"
-            android:text="Сайт музея: kuzbassizo.ru"
-            android:textColor="#000000"
-            android:textSize="16sp"
-            android:layout_marginLeft="10dp"
-            android:layout_marginRight="10dp"/>
+        <include
+            android:id="@+id/toolbar_new"
+            layout="@layout/toolbar_new" />
 
-        <TextView
-            android:id="@+id/TextView01"
+        <RelativeLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_below="@id/TextView00"
-            android:autoLink="phone"
-            android:linksClickable="true"
-            android:text="Телефон для справок:\n+7 (3842) 36 64 78 , касса\n+7 (3842) 36 50 33 , просветительский отдел"
-            android:textColor="#000000"
-            android:textSize="16sp"
-            android:layout_marginLeft="10dp"
-            android:layout_marginRight="10dp"/>
+            android:layout_height="match_parent"
+            android:background="#EEEEEE">
 
-        <TextView
-            android:id="@+id/TextView02"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_below="@id/TextView01"
-            android:autoLink="email"
-            android:linksClickable="true"
-            android:text="Вопросы, связанные с деятельностью Кемеровского областного музея изобразительных искусств, можно направлять по адресу электронной почты: kemizo@mail.ru
+            <TextView
+                android:id="@+id/TextView00"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:autoLink="web"
+                android:linksClickable="true"
+                android:text="Сайт музея: kuzbassizo.ru"
+                android:textColor="#000000"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/TextView01"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/TextView00"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:autoLink="phone"
+                android:linksClickable="true"
+                android:text="Телефон для справок:\n+7 (3842) 36 64 78 , касса\n+7 (3842) 36 50 33 , просветительский отдел"
+                android:textColor="#000000"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/TextView02"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/TextView01"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:autoLink="email"
+                android:linksClickable="true"
+                android:text="Вопросы, связанные с деятельностью Кемеровского областного музея изобразительных искусств, можно направлять по адресу электронной почты: kemizo@mail.ru
             \nИНН 4207044989"
-            android:textColor="#000000"
-            android:textSize="16sp"
-            android:layout_marginLeft="10dp"
-            android:layout_marginRight="10dp"/>
+                android:textColor="#000000"
+                android:textSize="16sp" />
 
-        <TextView
-            android:id="@+id/TextView03"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_below="@id/TextView02"
-            android:text="Адрес: 650991, г. Кемерово, пр. Советский, 48; остановка «Драмтеатр»"
-            android:textColor="#000000"
-            android:textSize="16sp"
-            android:layout_marginLeft="10dp"
-            android:layout_marginRight="10dp"/>
+            <TextView
+                android:id="@+id/TextView03"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/TextView02"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:text="Адрес: 650991, г. Кемерово, пр. Советский, 48; остановка «Драмтеатр»"
+                android:textColor="#000000"
+                android:textSize="16sp" />
 
-    </RelativeLayout>
+        </RelativeLayout>
     </LinearLayout>
 
     <android.support.design.widget.NavigationView
