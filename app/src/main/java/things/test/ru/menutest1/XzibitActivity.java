@@ -14,6 +14,7 @@ import android.view.View;
 import android.widget.Toast;
 
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
 
 import retrofit2.Call;
@@ -71,6 +72,8 @@ public class XzibitActivity extends BaseActivity {
                 //System.out.println("=========responded");
                 //System.out.println(response);
                 posts.addAll(response.body());
+                //posts.
+                Collections.reverse(posts);
                 //System.out.println("======got some to add");
                 recyclerView.getAdapter().notifyDataSetChanged();
             }
