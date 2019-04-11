@@ -125,6 +125,13 @@ public class BaseActivity extends AppCompatActivity
                 startActivity(intent);//все активити над прописывать в манифесте!!
             }
         }
+        else if(id==R.id.nav_about){
+            if(!(this instanceof AboutDevActivity)){
+                Intent intent = new Intent(this, AboutDevActivity.class);
+                intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+                startActivity(intent);//все активити над прописывать в манифесте!!
+            }
+        }
 
 //        else if (id == R.id.nav_share) {
 //

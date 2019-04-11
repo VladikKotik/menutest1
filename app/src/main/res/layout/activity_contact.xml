@@ -69,7 +69,8 @@
                 android:layout_below="@id/TextView02"
                 android:layout_marginLeft="10dp"
                 android:layout_marginRight="10dp"
-                android:text="Адрес: 650991, г. Кемерово, пр. Советский, 48; остановка «Драмтеатр»"
+                android:autoLink="map"
+                android:text="Адрес: Советский Проспект, 48, Кемерово, Кемеровская область, 650991 ; остановка «Драмтеатр»"
                 android:textColor="#000000"
                 android:textSize="16sp" />
 
@@ -86,3 +87,4 @@
         app:menu="@menu/activity_main_drawer" />
 
 </android.support.v4.widget.DrawerLayout>
+<!-- а вообще мб webview и autlolink all-->
