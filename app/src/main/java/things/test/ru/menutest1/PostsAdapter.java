@@ -25,7 +25,7 @@ public class PostsAdapter extends RecyclerView.Adapter<PostsAdapter.ViewHolder> 
     public PostsAdapter(Context context, List<PostPreviewModel> posts) {
         this.posts = posts;
         mContext = context;
-    }
+    }//кэшстратегия
 
     @Override
     public ViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
@@ -45,7 +45,7 @@ public class PostsAdapter extends RecyclerView.Adapter<PostsAdapter.ViewHolder> 
                 .load(url)
                 .placeholder(R.drawable.ic_cloud_off_red)
                 .skipMemoryCache(true)
-                .diskCacheStrategy(DiskCacheStrategy.NONE)
+                .diskCacheStrategy(DiskCacheStrategy.ALL)// не катит чета!!!
                 .into(imageView);
 
 //        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.N) {

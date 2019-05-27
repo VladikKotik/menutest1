@@ -6,6 +6,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:fitsSystemWindows="true"
+    app:layout_scrollFlags="scroll"
     tools:openDrawer="start">
 
     <LinearLayout
@@ -77,14 +78,8 @@
         </RelativeLayout>
     </LinearLayout>
 
-    <android.support.design.widget.NavigationView
-        android:id="@+id/contact_nav_view"
-        android:layout_width="wrap_content"
-        android:layout_height="match_parent"
-        android:layout_gravity="start"
-        android:fitsSystemWindows="true"
-        app:headerLayout="@layout/nav_header_main"
-        app:menu="@menu/activity_main_drawer" />
-
+    <include
+        android:id="@+id/nav_new"
+        layout="@layout/nav_new" />
 </android.support.v4.widget.DrawerLayout>
 <!-- а вообще мб webview и autlolink all-->

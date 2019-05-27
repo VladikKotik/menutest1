@@ -23,8 +23,11 @@ public class MainActivity extends BaseActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
-        setSupportActionBar(toolbar);
+        //Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
+
+//        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar_new);
+//
+//        setSupportActionBar(toolbar);
 
 //        FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
 //        fab.setOnClickListener(new View.OnClickListener() {
@@ -35,25 +38,26 @@ public class MainActivity extends BaseActivity {
 //            }
 //        });
 
-         final DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
-        ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(this, drawer, toolbar, R.string.navigation_drawer_open, R.string.navigation_drawer_close);
-                drawer.addDrawerListener(toggle);
-                toggle.syncState();
-
-                toolbar.setNavigationOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View v) {
-
-                      // You have to manually toggle drawer and set icon here
-                      if (drawer.isDrawerOpen(GravityCompat.START))
-                          drawer.closeDrawer(GravityCompat.START);
-                      else
-                          drawer.openDrawer((int) Gravity.START);
-                    }
-                });
-
-        NavigationView navigationView = (NavigationView) findViewById(R.id.main_nav_view);
-        navigationView.setNavigationItemSelectedListener(this);
+//         final DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
+//        ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(this, drawer, toolbar, R.string.navigation_drawer_open, R.string.navigation_drawer_close);
+//                drawer.addDrawerListener(toggle);
+//                toggle.syncState();
+//
+//                toolbar.setNavigationOnClickListener(new View.OnClickListener() {
+//                @Override
+//                public void onClick(View v) {
+//
+//                      // You have to manually toggle drawer and set icon here
+//                      if (drawer.isDrawerOpen(GravityCompat.START))
+//                          drawer.closeDrawer(GravityCompat.START);
+//                      else
+//                          drawer.openDrawer((int) Gravity.START);
+//                    }
+//                });
+//
+////        NavigationView navigationView = (NavigationView) findViewById(R.id.main_nav_view);
+//        NavigationView navigationView = (NavigationView) findViewById(R.id.nav_new);
+//        navigationView.setNavigationItemSelectedListener(this);
 
      //   Resources res = getResources();
 

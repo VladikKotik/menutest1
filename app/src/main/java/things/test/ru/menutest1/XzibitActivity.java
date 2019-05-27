@@ -30,7 +30,8 @@ public class XzibitActivity extends BaseActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_xzibit);
-        NavigationView navigationView = (NavigationView) findViewById(R.id.xzibit_nav_view);
+        //NavigationView navigationView = (NavigationView) findViewById(R.id.xzibit_nav_view);
+        NavigationView navigationView = (NavigationView) findViewById(R.id.nav_new);
         navigationView.setNavigationItemSelectedListener(this);
 
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar_new);

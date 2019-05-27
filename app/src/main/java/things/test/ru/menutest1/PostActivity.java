@@ -36,7 +36,8 @@ public class PostActivity extends BaseActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_post);
-        NavigationView navigationView = (NavigationView) findViewById(R.id.post_nav_view);
+        //NavigationView navigationView = (NavigationView) findViewById(R.id.post_nav_view);
+        NavigationView navigationView = (NavigationView) findViewById(R.id.nav_new);
         navigationView.setNavigationItemSelectedListener(this);
 //        //final PostModel[] post = new PostModel[1];
 

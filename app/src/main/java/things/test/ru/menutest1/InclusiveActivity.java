@@ -20,7 +20,8 @@ public class InclusiveActivity extends BaseActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_inclusive);
-        NavigationView navigationView = (NavigationView) findViewById(R.id.inclusive_nav_view);
+       // NavigationView navigationView = (NavigationView) findViewById(R.id.inclusive_nav_view);
+        NavigationView navigationView = (NavigationView) findViewById(R.id.nav_new);
         navigationView.setNavigationItemSelectedListener(this);
 
 

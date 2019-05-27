@@ -21,7 +21,8 @@ public class GoodsActivity extends BaseActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_goods);
 
-        NavigationView navigationView = (NavigationView) findViewById(R.id.good_nav_view);
+        //NavigationView navigationView = (NavigationView) findViewById(R.id.good_nav_view);
+        NavigationView navigationView = (NavigationView) findViewById(R.id.nav_new);
         navigationView.setNavigationItemSelectedListener(this);
 
 
