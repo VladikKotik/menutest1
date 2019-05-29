@@ -3,17 +3,14 @@ package things.test.ru.menutest1;
 import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;
 
-public class PostModel {
+public class CategoryModel {
 
     @SerializedName("ID")
     @Expose
     private String iD;
-    @SerializedName("post_title")
+    @SerializedName("title")
     @Expose
-    private String postTitle;
-    @SerializedName("post_content")
-    @Expose
-    private String postContent;
+    private String title;
     @SerializedName("guid")
     @Expose
     private String guid;
@@ -26,21 +23,14 @@ public class PostModel {
         this.iD = iD;
     }
 
-    public String getPostTitle() {
-        return postTitle;
+    public String getTitle() {
+        return title;
     }
 
-    public void setPostTitle(String postTitle) {
-        this.postTitle = postTitle;
+    public void setTitle(String title) {
+        this.title = title;
     }
 
-    public String getPostContent() {
-        return postContent;
-    }
-
-    public void setPostContent(String postContent) {
-        this.postContent = postContent;
-    }
     public String getGuid() {
         return guid;
     }

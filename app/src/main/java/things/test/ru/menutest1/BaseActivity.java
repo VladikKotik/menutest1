@@ -138,7 +138,14 @@ public class BaseActivity extends AppCompatActivity
                 startActivity(intent);//все активити над прописывать в манифесте!!
             }
 
-        } //else if (id == R.id.nav_manage) {}
+        }
+        else if (id == R.id.nav_manage) {
+//            Intent intent = new Intent(this, CategoriesActivity.class);
+            Intent intent = new Intent(this, CategoriesActivity.class);
+
+            intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+            startActivity(intent);
+        }
 
         else if(id==R.id.nav_goods){
             if(!(this instanceof GoodsActivity)) {

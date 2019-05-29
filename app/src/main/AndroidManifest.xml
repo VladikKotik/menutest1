@@ -47,6 +47,13 @@
 
         <activity android:name=".AboutDevActivity"
             android:label="О приложении"/>
+        <activity android:name=".CategoriesActivity"
+            android:label="Галерея"/>
+        <activity android:name=".ExposActivity"
+            android:label="Галерея"/>
+        <activity android:name=".ExpoActivity"
+            android:label="Галерея"/>
+
 
         <!--
               The API key for Google Maps-based APIs is defined as a string resource.
