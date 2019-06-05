@@ -7,7 +7,7 @@
         <item
             android:id="@+id/nav_main"
             android:icon="@drawable/house_logo"
-            android:title="Стартовая страница" />
+            android:title="Главная" />
         <item
             android:id="@+id/nav_maps"
             android:icon="@android:drawable/ic_menu_mapmode"
@@ -23,9 +23,9 @@
             android:title="Выставки" />
 
         <item
-            android:id="@+id/nav_manage"
-            android:icon="@drawable/ic_menu_manage"
-            android:title="галерея" />
+            android:id="@+id/nav_gallery"
+            android:icon="@drawable/gallery_icon"
+            android:title="Галерея" />
         <item
             android:id="@+id/nav_goods"
             android:icon="@drawable/ruble"

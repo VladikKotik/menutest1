@@ -139,12 +139,13 @@ public class BaseActivity extends AppCompatActivity
             }
 
         }
-        else if (id == R.id.nav_manage) {
+        else if (id == R.id.nav_gallery) {
 //            Intent intent = new Intent(this, CategoriesActivity.class);
+            if(!(this instanceof CategoriesActivity) && !(this instanceof ExposActivity) && !(this instanceof ExpoActivity)){
             Intent intent = new Intent(this, CategoriesActivity.class);
 
             intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
-            startActivity(intent);
+            startActivity(intent);}
         }
 
         else if(id==R.id.nav_goods){
