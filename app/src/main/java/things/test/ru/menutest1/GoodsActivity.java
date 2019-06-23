@@ -21,7 +21,7 @@ public class GoodsActivity extends BaseActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_goods);
 
-        //NavigationView navigationView = (NavigationView) findViewById(R.id.good_nav_view);
+
         NavigationView navigationView = (NavigationView) findViewById(R.id.nav_new);
         navigationView.setNavigationItemSelectedListener(this);
 
@@ -47,16 +47,7 @@ public class GoodsActivity extends BaseActivity {
             }
         });
 
-        //Resources res = getResources();
 
-
-//        TextView textView=(TextView) findViewById(R.id.good_text);
-//        String content= res.getString(R.string.good_about);
-//        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.N) {
-//            textView.setText(Html.fromHtml(content, Html.FROM_HTML_MODE_COMPACT));
-//        } else {
-//            textView.setText(Html.fromHtml(content));
-//        }
 
         WebView view = (WebView) findViewById(R.id.textGoods);
         String text;

@@ -65,7 +65,7 @@ public class ExposAdapter extends RecyclerView.Adapter<ExposAdapter.ViewHolder> 
     }
 
     class ViewHolder extends RecyclerView.ViewHolder implements View.OnClickListener {
-        //TextView post;
+
         TextView title;
         ImageView image;
         CardView cv;
@@ -86,7 +86,7 @@ public class ExposAdapter extends RecyclerView.Adapter<ExposAdapter.ViewHolder> 
                 Intent intent = new Intent(mContext, ExpoActivity.class);
                 intent.putExtra("expo_ID", Integer.parseInt(oneExpo.getID()));
                 intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
-                mContext.startActivity(intent);//все активити над прописывать в манифесте!!
+                mContext.startActivity(intent);
             }
         }
     }

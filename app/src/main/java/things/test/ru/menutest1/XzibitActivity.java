@@ -30,7 +30,6 @@ public class XzibitActivity extends BaseActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_xzibit);
-        //NavigationView navigationView = (NavigationView) findViewById(R.id.xzibit_nav_view);
         NavigationView navigationView = (NavigationView) findViewById(R.id.nav_new);
         navigationView.setNavigationItemSelectedListener(this);
 
@@ -65,17 +64,11 @@ public class XzibitActivity extends BaseActivity {
         recyclerView.setAdapter(adapter);
 
 
-        //App.getApi().getData("bash", 50).enqueue(new Callback<List<PostPreviewModel>>() {
-        //App.getUmoriliApiRandom().getRandomData( 10).enqueue(new Callback<List<PostPreviewModel>>() {
-        App.getMuzeyApiPosts().getData().enqueue(new Callback<List<PostPreviewModel>>() {
+       App.getMuzeyApiPosts().getData().enqueue(new Callback<List<PostPreviewModel>>() {
             @Override
             public void onResponse(Call<List<PostPreviewModel>> call, Response<List<PostPreviewModel>> response) {
-                //System.out.println("=========responded");
-                //System.out.println(response);
                 posts.addAll(response.body());
-                //posts.
                 Collections.reverse(posts);
-                //System.out.println("======got some to add");
                 recyclerView.getAdapter().notifyDataSetChanged();
             }
 

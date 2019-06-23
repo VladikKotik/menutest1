@@ -28,21 +28,6 @@ public class BaseActivity extends AppCompatActivity
         super.onCreate(savedInstanceState);
         mContext=BaseActivity.this;
 
-        //setContentView(R.layout.activity_main);
-
-        //NavigationView navigationView = (NavigationView) findViewById(R.id.nav_new);
-        //navigationView.setNavigationItemSelectedListener(this);
-
-
-
-//        DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
-//        ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(
-//                this, drawer, toolbar, R.string.navigation_drawer_open, R.string.navigation_drawer_close);
-//        drawer.addDrawerListener(toggle);
-//        toggle.syncState();
-//
-//        NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
-//        navigationView.setNavigationItemSelectedListener(this);
 
     }
 
@@ -102,11 +87,7 @@ public class BaseActivity extends AppCompatActivity
         // as you specify a parent activity in AndroidManifest.xml.
         int id = item.getItemId();
 
-        //noinspection SimplifiableIfStatement
 
-//        if (id == R.id.action_settings) {
-//            return true;
-//        }
 
         return super.onOptionsItemSelected(item);
     }
@@ -123,12 +104,6 @@ public class BaseActivity extends AppCompatActivity
                 intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
                 startActivity(intent);//все активити над прописывать в манифесте!!
             }
-//         }else if (id == R.id.nav_gallery) {
-//            if(!(this instanceof GalleryActivity)) {
-//                Intent intent = new Intent(this, GalleryActivity.class);
-//                intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
-//                startActivity(intent);//все активити над прописывать в манифесте!!
-//            }
 
 
         } else if (id == R.id.nav_main) {
@@ -140,7 +115,6 @@ public class BaseActivity extends AppCompatActivity
 
         }
         else if (id == R.id.nav_gallery) {
-//            Intent intent = new Intent(this, CategoriesActivity.class);
             if(!(this instanceof CategoriesActivity) && !(this instanceof ExposActivity) && !(this instanceof ExpoActivity)){
             Intent intent = new Intent(this, CategoriesActivity.class);
 
@@ -183,12 +157,6 @@ public class BaseActivity extends AppCompatActivity
                 startActivity(intent);//все активити над прописывать в манифесте!!
             }
         }
-
-//        else if (id == R.id.nav_share) {
-//
-//        } else if (id == R.id.nav_send) {
-//
-//        }
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         drawer.closeDrawer(GravityCompat.START);

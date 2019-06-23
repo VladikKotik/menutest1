@@ -20,7 +20,7 @@ public class InclusiveActivity extends BaseActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_inclusive);
-       // NavigationView navigationView = (NavigationView) findViewById(R.id.inclusive_nav_view);
+
         NavigationView navigationView = (NavigationView) findViewById(R.id.nav_new);
         navigationView.setNavigationItemSelectedListener(this);
 
@@ -47,16 +47,6 @@ public class InclusiveActivity extends BaseActivity {
             }
         });
 
-//        Resources res = getResources();
-//
-//
-//        TextView textView=(TextView) findViewById(R.id.textInclusive1);
-//        String content= res.getString(R.string.inclusive_part1);
-//        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.N) {
-//            textView.setText(Html.fromHtml(content, Html.FROM_HTML_MODE_COMPACT));
-//        } else {
-//            textView.setText(Html.fromHtml(content));
-//        }
 
 
         WebView view = (WebView) findViewById(R.id.textInclusive1);

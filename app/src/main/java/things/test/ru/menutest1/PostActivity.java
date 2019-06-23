@@ -36,10 +36,9 @@ public class PostActivity extends BaseActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_post);
-        //NavigationView navigationView = (NavigationView) findViewById(R.id.post_nav_view);
         NavigationView navigationView = (NavigationView) findViewById(R.id.nav_new);
         navigationView.setNavigationItemSelectedListener(this);
-//        //final PostModel[] post = new PostModel[1];
+
 
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar_new);
         setSupportActionBar(toolbar);
@@ -72,21 +71,8 @@ public class PostActivity extends BaseActivity {
                 post_image=findViewById(R.id.post_image);
 
                 post_title.setText("\t\t"+post.getPostTitle());
-                //post_content.setText(post.getPostContent());
 
-//                //String result_post_title= "<![CDATA[<h1>\\t"+post.getPostTitle()+"</h1>]]>";
-//                String result_post_title= "<![CDATA[<h1>\t Контактная информация</h1>]]>";
-//                if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.N) {
-//                    post_title.setText(Html.fromHtml(result_post_title, Html.FROM_HTML_MODE_COMPACT));
-//                } else {
-//                    post_title.setText(Html.fromHtml(result_post_title));
-//                }
-
-
-
-                //System.out.println(post.getPostContent());
                 String result_post_content = post.getPostContent().replaceAll("[<].*?[>]", "");
-                //String result_post_content2 = result_post_content.replaceFirst("\r\n\r", "\n\t\t");
 
                 post_content.setText(result_post_content);
 
@@ -112,9 +98,7 @@ public class PostActivity extends BaseActivity {
             }
         });
 
-        //вот тут пост уже нулл cyfчала всё до запроса, а потом уже запрос так шо над все внутри во время выполнения запроса
 
-        //тут мб сделать регеэкспом шоб игнорил <img * />
 
 
 

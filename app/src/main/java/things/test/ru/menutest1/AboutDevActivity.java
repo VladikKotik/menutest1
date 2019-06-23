@@ -18,44 +18,6 @@ public class AboutDevActivity extends BaseActivity {
         super.onCreate(savedInstanceState);
         super.setContentView(R.layout.activity_aboutdev);
 
-        //NavigationView navigationView = (NavigationView) findViewById(R.id.dev_nav_view);
-
-//        NavigationView navigationView = (NavigationView) findViewById(R.id.nav_new);
-//
-//        navigationView.setNavigationItemSelectedListener(this);
-//
-//
-//        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar_new);
-//        setSupportActionBar(toolbar);
-//
-//
-//        final DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
-//        ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(this, drawer, toolbar, R.string.navigation_drawer_open, R.string.navigation_drawer_close);
-//        drawer.addDrawerListener(toggle);
-//        toggle.syncState();
-//
-//        toolbar.setNavigationOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View v) {
-//
-//                // You have to manually toggle drawer and set icon here
-//                if (drawer.isDrawerOpen(GravityCompat.START))
-//                    drawer.closeDrawer(GravityCompat.START);
-//                else
-//                    drawer.openDrawer((int) Gravity.START);
-//            }
-//        });
-
-        //
-
-
-//        TextView textView=(TextView) findViewById(R.id.good_text);
-//        String content= res.getString(R.string.good_about);
-//        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.N) {
-//            textView.setText(Html.fromHtml(content, Html.FROM_HTML_MODE_COMPACT));
-//        } else {
-//            textView.setText(Html.fromHtml(content));
-//        }
         Resources res = getResources();
 
 

@@ -29,7 +29,6 @@ public class CategoriesActivity extends BaseActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_categories);
-        //NavigationView navigationView = (NavigationView) findViewById(R.id.xzibit_nav_view);
         NavigationView navigationView = (NavigationView) findViewById(R.id.nav_new);
         navigationView.setNavigationItemSelectedListener(this);
 
@@ -46,7 +45,6 @@ public class CategoriesActivity extends BaseActivity {
             @Override
             public void onClick(View v) {
 
-                // You have to manually toggle drawer and set icon here
                 if (drawer.isDrawerOpen(GravityCompat.START))
                     drawer.closeDrawer(GravityCompat.START);
                 else
@@ -64,17 +62,13 @@ public class CategoriesActivity extends BaseActivity {
         recyclerView.setAdapter(adapter);
 
 
-        //App.getApi().getData("bash", 50).enqueue(new Callback<List<PostPreviewModel>>() {
-        //App.getUmoriliApiRandom().getRandomData( 10).enqueue(new Callback<List<PostPreviewModel>>() {
+
         App.getMuzeyApiPosts().getCategories().enqueue(new Callback<List<CategoryModel>>() {
             @Override
             public void onResponse(Call<List<CategoryModel>> call, Response<List<CategoryModel>> response) {
-                //System.out.println("=========responded");
-                //System.out.println(response);
+
                 categories.addAll(response.body());
-                //posts.
-               // Collections.reverse(posts);
-                //System.out.println("======got some to add");
+
                 recyclerView.getAdapter().notifyDataSetChanged();
             }
 

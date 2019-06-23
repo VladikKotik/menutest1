@@ -48,11 +48,7 @@ public class CategoriesAdapter extends RecyclerView.Adapter<CategoriesAdapter.Vi
                 .diskCacheStrategy(DiskCacheStrategy.ALL)// не катит чета!!!
                 .into(imageView);
 
-//        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.N) {
-//            holder.post.setText(Html.fromHtml(post.getPostContent(), Html.FROM_HTML_MODE_LEGACY));
-//        } else {
-//            holder.post.setText(Html.fromHtml(post.getPostContent()));
-//        }
+
         holder.title.setText(category.getTitle());
 
     }

@@ -34,10 +34,10 @@ public class ExpoActivity extends BaseActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_expo);
-        //NavigationView navigationView = (NavigationView) findViewById(R.id.post_nav_view);
+
         NavigationView navigationView = (NavigationView) findViewById(R.id.nav_new);
         navigationView.setNavigationItemSelectedListener(this);
-//        //final PostModel[] post = new PostModel[1];
+
 
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar_new);
         setSupportActionBar(toolbar);
@@ -61,7 +61,7 @@ public class ExpoActivity extends BaseActivity {
         });
 
         int expo_id=getIntent().getIntExtra("expo_ID",-1);
-        //int expo_id=317;
+
         App.getMuzeyApiPosts().getExpo(expo_id).enqueue(new Callback<ExpoModel>() {
             @Override
             public void onResponse(Call<ExpoModel> call, Response<ExpoModel> response) {
@@ -71,21 +71,8 @@ public class ExpoActivity extends BaseActivity {
                 expo_image=findViewById(R.id.expo_image);
 
                 expo_title.setText("\t\t"+expo.getPostTitle());
-                //post_content.setText(post.getPostContent());
 
-//                //String result_post_title= "<![CDATA[<h1>\\t"+post.getPostTitle()+"</h1>]]>";
-//                String result_post_title= "<![CDATA[<h1>\t Контактная информация</h1>]]>";
-//                if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.N) {
-//                    post_title.setText(Html.fromHtml(result_post_title, Html.FROM_HTML_MODE_COMPACT));
-//                } else {
-//                    post_title.setText(Html.fromHtml(result_post_title));
-//                }
-
-
-
-                //System.out.println(post.getPostContent());
                 String result_post_content = expo.getPostContent().replaceAll("[<].*?[>]", "");
-                //String result_post_content2 = result_post_content.replaceFirst("\r\n\r", "\n\t\t");
 
                 expo_content.setText(result_post_content);
 
@@ -110,11 +97,6 @@ public class ExpoActivity extends BaseActivity {
                 Toast.makeText(ExpoActivity.this, "An error occurred during networking", Toast.LENGTH_SHORT).show();
             }
         });
-
-        //вот тут пост уже нулл cyfчала всё до запроса, а потом уже запрос так шо над все внутри во время выполнения запроса
-
-        //тут мб сделать регеэкспом шоб игнорил <img * />
-
 
 
     }

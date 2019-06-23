@@ -65,17 +65,13 @@ public class ExposActivity extends BaseActivity {
 
         int category_id=getIntent().getIntExtra("category_ID",-1);
 
-        //App.getApi().getData("bash", 50).enqueue(new Callback<List<PostPreviewModel>>() {
-        //App.getUmoriliApiRandom().getRandomData( 10).enqueue(new Callback<List<PostPreviewModel>>() {
+
         App.getMuzeyApiPosts().getExpos(category_id).enqueue(new Callback<List<ExpoPreviewModel>>() {
             @Override
             public void onResponse(Call<List<ExpoPreviewModel>> call, Response<List<ExpoPreviewModel>> response) {
-                //System.out.println("=========responded");
-                //System.out.println(response);
+
                 expos.addAll(response.body());
-                //posts.
-                //Collections.reverse(expos);
-                //System.out.println("======got some to add");
+
                 recyclerView.getAdapter().notifyDataSetChanged();
             }
 
