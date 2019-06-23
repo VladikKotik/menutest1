@@ -118,11 +118,11 @@ public class BaseActivity extends AppCompatActivity
         int id = item.getItemId();
 
         if (id == R.id.nav_maps) {
-
-            Intent intent = new Intent(this, MapsActivity.class);
-            intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
-            startActivity(intent);//все активити над прописывать в манифесте!!
-
+            if(!(this instanceof MapsActivity)) {
+                Intent intent = new Intent(this, MapsActivity.class);
+                intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+                startActivity(intent);//все активити над прописывать в манифесте!!
+            }
 //         }else if (id == R.id.nav_gallery) {
 //            if(!(this instanceof GalleryActivity)) {
 //                Intent intent = new Intent(this, GalleryActivity.class);

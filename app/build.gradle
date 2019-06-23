@@ -6,8 +6,8 @@ android {
         applicationId "things.test.ru.menutest1"
         minSdkVersion 19
         targetSdkVersion 27
-        versionCode 3   //for market
-        versionName "1.0.2" //for users
+        versionCode 4   //for market
+        versionName "1.0.3" //for users
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
     }
     buildTypes {
